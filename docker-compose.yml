@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  hello1:
+    container_name: hellocontainer1
+    image: ${DOCKER_REGISTRY-}hello1
+    build:
+      context: .
+      dockerfile: Hello1/Dockerfile
+
+  hello2:
+    container_name: hellocontainer2
+    image: ${DOCKER_REGISTRY-}hello2
+    build:
+      context: .
+      dockerfile: Hello2/Dockerfile
+
